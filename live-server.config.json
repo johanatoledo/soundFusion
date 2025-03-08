@@ -1,0 +1,10 @@
+{
+    "port": 3000, 
+    "root":"front",                     
+    "file": "index.html",   
+    "open": true,          
+    "wait": 100,             
+    "logLevel": 2,             
+    "cors": true                
+  }
+  

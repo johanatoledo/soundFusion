@@ -1,0 +1,295 @@
+body{
+   
+  background-color: #93a63e;
+
+
+}
+/* Estilo General del Header */
+header {
+  display:flex;
+  width:100%;
+  position: fixed;
+  justify-content: space-between;
+  backdrop-filter: blur(20px); /* Difumina el fondo */
+  background:#96c824; 
+  top: 0;
+  left:0;
+  z-index: 10;
+  align-items: center;
+  padding: 10px 40px;
+  transition: background 0.3s ease-in-out;
+  height: 15%;
+}
+.logo{
+  margin-left:2px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+.logo img {
+  width: 150%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+
+}
+.logo img:hover {
+  transform: scale(1.1);
+}
+/* ========== Logo Position ========== */
+.logo-position {
+  position: absolute;
+  top: 10px; /* Ajuste superior */
+  left: 20px; /* Ajuste izquierdo */
+}
+.home-title{
+  margin-left: 100px;
+  color:white;
+  
+  
+}
+/* ========== Menu Position ========== */
+.menu-position {
+  position: absolute;
+  top: 20px; /* Ajuste superior */
+  right: 40px; /* Ajuste derecho */
+ 
+}
+.menu-nav{
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px; 
+}
+.dropdown-menu{
+  background-color:#96c824; 
+}
+.nav-list {
+  display: inline-flex; /* Usamos inline-flex para que el contenedor solo ocupe el ancho de los elementos */
+  gap: 100px; /* Espaciado entre los items */
+  margin: 0; /* Elimina márgenes */
+  list-style: none; /* Quita los puntos de la lista */
+  align-items: center; /* Alinea verticalmente los items */
+  width: auto; /* Permite que solo ocupe el ancho necesario */
+  padding: 10px 20px; /* Espaciado interno para que no se peguen los items al borde */
+  justify-content: space-between;
+ 
+  
+}
+
+.nav-item {
+  width: auto;/* Permite que el ítem solo ocupe lo que mide su contenido */
+}
+
+.nav-link {
+  display: block; /* Hace que el link ocupe todo el contenedor */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 20px !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+  text-align: center; /* Alinea texto */
+}
+
+.dropdown-menu{
+  background: #96c824 !important;
+  border:none !important;
+}
+.dropdown-item{
+  color:white !important;
+}
+.dropdown-item:focus{
+color:#949a5e !important;
+}
+.dropdown-item:hover{
+  color:black !important;
+  background: none !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-toggler {
+  background: #fff;
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/*clases iconos*/
+.circle_social {
+  display: inline-flex; /* Permite centrar los iconos */
+  align-items: center;  /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  width: 45px;       /* Tamaño del círculo */
+  height: 45px;      /* Tamaño del círculo */
+  border-radius: 50%; /* Hace que el contenedor sea circular */
+  background: rgba(255, 255, 255, 0.2); /* Efecto vidrio transparente */
+  backdrop-filter: blur(8px); /* Efecto vidrio */
+  transition: all 0.4s ease; /* Animación suave */
+  margin: 0 10px; /* Espaciado entre iconos */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.circle_social i {
+  font-size: 40px;  /* Tamaño del icono */
+  color: white;     /* Color inicial del icono */
+  transition: color 0.4s ease; /* Efecto suave al pasar el cursor */
+}
+
+.circle_social:hover {
+  background: #3d6b01; /* Cambia a color verde con hover */
+  transform: scale(1.1); /* Efecto de escala */
+}
+
+.circle_social:hover i {
+  color: #fff; /* Cambia el color del icono */
+}
+
+
+/* Contenedor de Video */
+.main-video-container {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px; /* Espacio entre el menú y el video */
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.main-video-container video {
+  width: 100%; 
+  height: 100vh;
+  object-fit: cover; /* Ajuste perfecto */
+  filter: grayscale(20%) blur(2px); /* Efecto Blur + Blanco y Negro */
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+}
+
+.main-video-container video:hover {
+  filter: grayscale(0%) blur(0px);
+  transform: scale(1.05);
+}
+
+.main-video-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Capa de oscurecimiento */
+  z-index: 1;
+}
+
+.main-video-container video {
+  z-index: 2;
+}
+
+
+/* Ocultar los elementos del menú cuando la pantalla sea menor de 992px */
+@media (max-width: 992px) {
+  header {
+      flex-direction: column; /* Cambia la dirección */
+      position: relative;
+      height: 200px;
+      width: 100%;
+      margin-top:0px;
+      margin-bottom:30px;
+      margin-right: 10px;
+      backdrop-filter: blur(20px); /* Difumina el fondo */
+      background:#96c824; 
+    
+  }
+  .home-title{
+      margin:5px;
+       font-size:18px;
+   }
+   .logo-position {
+      position: relative;
+      margin-bottom: 10px;
+      left: 0;
+  }
+ 
+  .logo{
+      margin-left:2px;
+      margin-top: 0;
+      margin-bottom: 5px;
+  }
+  .logo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+  
+  }
+  .logo img:hover {
+      transform: scale(1.1);
+  }
+  .nav-list {
+      display: none ; /* Oculta la lista completa */
+      flex-direction: column; /* Cambia la dirección de los elementos */
+      gap: 20px !important; /* Añade espacio entre los elementos */
+      background: rgba(150, 200, 36, 0.3); /* Color con transparencia */
+      backdrop-filter: blur(15px); /* Difuminado del fondo */
+      -webkit-backdrop-filter: blur(15px); /* Compatibilidad con Safari */ 
+      border-radius: 5px; 
+      padding: 30px;
+      position: absolute !important;
+      right: 0px !important;
+      top: 50px !important; /* Aparece debajo del botón */
+      z-index: 10 !important;
+    
+  }
+
+ 
+ 
+  /* Mostrar la lista al hacer click en el botón hamburguesa */
+.navbar-toggler[aria-expanded="true"] + .nav-list {
+  display: flex; /* Muestra el menú con diseño vertical */
+  animation: fadeIn 0.3s ease-in-out; /* Animación de entrada */
+}
+
+.navbar-toggler{
+  border-color:none !important;
+}
+
+.navbar-toggler.active{
+  border-color:none !important;
+} 
+.navbar-nav .nav-link {
+  color:#000000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:focus {
+  color:#000000;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+ .main-video-container {
+  width: 100%;
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 200px; /* Espacio entre el menú y el video */
+  overflow: hidden;
+  position: relative;
+ 
+}
+}
+
+
