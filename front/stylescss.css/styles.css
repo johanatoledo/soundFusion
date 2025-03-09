@@ -193,8 +193,15 @@ color:#949a5e !important;
 .main-video-container video {
   z-index: 2;
 }
-
-
+.content_element {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+.list{
+  background: rgba(151, 200, 36, 0.131); /* Color con transparencia */
+  width: 40%;
+  padding-left: 30px;
+}
 /* Ocultar los elementos del menú cuando la pantalla sea menor de 992px */
 @media (max-width: 992px) {
   header {
@@ -285,7 +292,7 @@ color:#949a5e !important;
   display: flex;
   justify-content:center;
   align-items: center;
-  margin-top: 200px; /* Espacio entre el menú y el video */
+  margin-top: 50px; /* Espacio entre el menú y el video */
   overflow: hidden;
   position: relative;
  
