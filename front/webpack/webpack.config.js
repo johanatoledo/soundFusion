@@ -1,25 +1,24 @@
 const path = require("path");
-const nodeExternals = require("webpack-node-externals");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  target: "node", // Importante para aplicaciones backend con Node.js
-  entry: "./src/index.js", // Tu archivo de entrada
+  entry: "./src/index.js", // Ajusta la ruta según tu estructura
   output: {
-    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    clean: true,
+    filename: "bundle.js",
   },
-  externals: [nodeExternals()], // Ignora los módulos de node_modules
-  mode: process.env.NODE_ENV || "development",
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "front/assets", to: "assets" }, // Copia imágenes a "dist/assets"
+      ],
+    }),
+  ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 3000,
   },
 };
