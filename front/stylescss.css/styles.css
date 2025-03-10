@@ -197,13 +197,112 @@ color:#949a5e !important;
   margin-top: 50px;
   margin-left: 30px;
 }
-.list{
-  background: rgba(151, 200, 36, 0.131); /* Color con transparencia */
-  width: 40%;
-  padding-left: 30px;
+/* descripcion de servicios */
+.services-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.services-description {
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(151, 200, 36, 0.4); /* Color con transparencia */
+  color: #3d6b01;
+  padding: 60px;
+}
+
+.services-description h3 {
+  font-size: 40px;
+}
+
+.services-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-items {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: black;
+  padding: 10px;
+}
+/* Contenedor de imagenes */
+.services-images {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin:20px;
+}
+
+.services-images img {
+  height: 250px;
+  width: 300px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+/* Contenedor de secciones */
+.events-section{
+  background: rgba(151, 200, 36, 0.4); /* Color con transparencia */
+}
+/* Sección 1: Encabezado */
+.header-section {
+  text-align: center;
+  padding: 40px 20px;
+  
+}
+
+.header-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #3d6b01;
+}
+
+/* Sección 2: Eventos */
+.events-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.event {
+  text-align: center;
+  width: 22%;
+  min-width: 200px;
+}
+
+.event img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.event img:hover {
+  transform: scale(1.1);
+  margin-bottom: 20px;
+}
+
+.event h3 {
+  margin-top: 10px;
+  
+  font-size: 2.8rem;
+  color: #afa10a;
+}
+.section-title{
+  font-family: Parisienne;
 }
 /* Ocultar los elementos del menú cuando la pantalla sea menor de 992px */
 @media (max-width: 992px) {
+  /* Menu nav*/
   header {
       flex-direction: column; /* Cambia la dirección */
       position: relative;
@@ -256,9 +355,6 @@ color:#949a5e !important;
       z-index: 10 !important;
     
   }
-
- 
- 
   /* Mostrar la lista al hacer click en el botón hamburguesa */
 .navbar-toggler[aria-expanded="true"] + .nav-list {
   display: flex; /* Muestra el menú con diseño vertical */
@@ -285,7 +381,7 @@ color:#949a5e !important;
   transition: transform 0.3s ease-in-out;
 }
 
-
+/* contenedor de video*/
  .main-video-container {
   width: 100%;
   height: 100vh; /* Ocupa toda la pantalla */
@@ -293,10 +389,62 @@ color:#949a5e !important;
   justify-content:center;
   align-items: center;
   margin-top: 50px; /* Espacio entre el menú y el video */
+  margin-bottom: 40px;
   overflow: hidden;
   position: relative;
  
 }
+
+/* contenedor de servicios*/
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
+.services-description {
+  padding: 30px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.services-description h3 {
+  font-size: 20px;
+}
+
+.list-items {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: black;
+  padding: 10px;
+}
+
+.services-images {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin:20px;
+}
+
+.services-images img {
+  height: 100px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  
+}
+
+  .events-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .event {
+      width: 80%;
+  }
+}
 
