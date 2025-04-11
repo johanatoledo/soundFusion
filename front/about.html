@@ -40,7 +40,7 @@
 
 
 </head>
-<body>
+<body class="body-static">
    
     <header>
        
@@ -67,7 +67,7 @@
                         Services
                     </a>
                     <ul class="dropdown-menu">
-                        <li ><a class="dropdown-item" href="live_sound.html">Live Sound</a></li>
+                        
                         <li ><a class="dropdown-item" href="dj.html">DJ</a></li>
                         <li ><a class="dropdown-item" href="weddings.html">Weddings</a></li>
                         <li ><a class="dropdown-item" href="Lighting.html">Lighting</a></li>
@@ -102,9 +102,88 @@
         </span>
     </div>                         
 </header>
- 
+
+<main>
+      
+        
+    <section class="section-static">
+      <article id="container-section-static"  >
+        <div class="static-title">
+        <h2 >About</h2>
+    </div>
+      <div class="container-static">
+       <p class="text-page-static">
+        Our owner has over 20 years of experience in the field of Sound Engineering, and has worked in Baltimore City clubs.
+        The owner has trained all staff above production standard. All of our staff love working with sound equipment and production lighting, and specialize in knowing how to tune it to create the best listening and lighting experience for our customers. Our equipment is of the highest quality and receives regular maintenance. Our lighting is of the newest variety and technology.
+        We have receive lots and lots of kudos from previous clients in regards to our customer service. We strive to provide you with a custom entertainment schedule for your event. Each event comes with a complementary sit-down consultation, so that we can be sure you will love our service.
+    </div>
+       </article>
+       <article class="image-slider">
+        <div class="slide">
+            <img src="./assets/photo1518.jpg" alt="img1">
+            <img src="./assets/photo1612.jpg" alt="img2">
+            <img src="./assets/photo1512.jpg" alt="img3">
+            <img src="./assets/photo1312.jpg" alt="img4">
+            <img src="./assets/photo1318.jpg" alt="img5">
+            <img src="./assets/photo1415.jpg" alt="img6">
+            <img src="./assets/photo1622.jpeg" alt="img7">
+            <img src="./assets/photo1518.jpg" alt="img8">
+            
+
+           
+        </div>
+       </article>
+    </section>
+
+   </main>
   
+   <footer>
+    <div class="footer">
+    <div class="footer-section company-info">
+      <img src="https://static.wixstatic.com/media/e47b41_a998752249a943e883a152d44389f191~mv2.jpg/v1/fill/w_52,h_80,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e47b41_a998752249a943e883a152d44389f191~mv2.jpg" alt="Sound Fusion Entertainment Logo" class="logo-footer">
+      <p>Sound Fusion Entertainment offers unforgettable experiences with the best events and live shows.</p>
+    </div>
+    
+    <div class="footer-section location-info">
+      <h3 class="location-footer">Our Location</h3>
+      <p><a href="https://www.google.com/maps/place/Sound+Fusion+Entertainment/@39.4249493,-79.3918593,16.25z/data=!4m6!3m5!1s0x884aab4ffb4fcb81:0xdb1afe4f38df9c65!8m2!3d39.4240029!4d-79.3908133!16s%2Fg%2F1262tsryt?entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot icon-footer"></i></a>13180 Garrett Hwy, Ste F PMB 30, Oakland, MD 21550, USA</p>
+      <p><i class="fa-solid fa-phone icon-footer"></i>Phone: (301) 859-8353</p>
+      <p><i class="fa-solid fa-envelope icon-footer"></i>Email: sound.fusion.entertainment@live.com</p>
+    </div>
   
+      <form id="form">
+        <h3 class="contact-footer">Contact</h3>
+        <input type="email" id="email" name="email" placeholder="your email address" required>
+        <span id="errorEmail" class="error">Correo inválido</span>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+    </div>
+    <div class="Designe">
+        <p>Copyright © 2025. Designe by <a href="" target="blank"> <span style="text-decoration: underline;color:#3d6b01">Toledo WebTech LLC</span></a>.</p>
+       </div>
+   
+  </footer>
+  
+   <script>
+    document.getElementById("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita el envío si hay error
+
+        let email = document.getElementById("email").value;
+        let errorEmail = document.getElementById("errorEmail");
+
+        // Expresión regular para validar correos electrónicos
+        let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!regexEmail.test(email)) {
+            errorEmail.style.display = "block";
+        } else {
+            errorEmail.style.display = "none";
+            alert("Valid email, sending form...");
+            this.submit(); // Envía el formulario si todo está correcto
+        }
+    });
+</script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
