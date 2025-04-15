@@ -107,8 +107,8 @@
         <div class="row justify-content-center ">
             <div class="col-md-6">
                 <div class="card shadow-lg p-4 contact-container-content">
-                    <h2 class="text-center mb-4 color-text-form">Contact Us</h2>
-                    <form>
+                    <h2 class="text-center mb-4 color-text-form letter-form-sent" id="text">Contact Us</h2>
+                    <form id="form" >
                         <div class="mb-3 ">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" class="form-control style-input" id="name" placeholder="Enter your name" required>      
@@ -165,7 +165,45 @@
    </div>
 
   
-  
+  <script>
+
+    const form=document.getElementById("form"),
+    text=document.getElementById("text"),
+    nameform=document.getElementById("name"),
+     emailform=document.getElementById("email"),
+    phoneform=document.getElementById("phone"),
+    addressform=document.getElementById("address"),
+    subjectform=document.getElementById("subject"),
+    messageform=document.getElementById("message");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+      const datos={
+        name:nameform.value,
+        email:emailform.value,
+        phone:phoneform.value,
+        address:addressform.value,
+        subject:subjectform.value,
+        message:messageform.value
+      }
+   
+    console.log("Datos del formulario",datos)
+
+    form.innerHTML=''
+    const element = document.createElement('div');
+    element.classList.add('form-style');
+    form.appendChild(element);
+    text.classList.add('letter-form-sent');
+    text.innerHTML='Thank you for contacting us!!'
+   
+ 
+    })
+
+   
+
+
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
