@@ -1,5 +1,5 @@
 const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js", // Ajusta la ruta según tu estructura
@@ -8,10 +8,9 @@ module.exports = {
     filename: "bundle.js",
   },
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "front/assets", to: "assets" }, // Copia imágenes a "dist/assets"
-      ],
+    new HtmlWebpackPlugin({
+      template: "./contact.html", // 👉 está en la raíz
+      filename: "contact.html",
     }),
   ],
   devServer: {

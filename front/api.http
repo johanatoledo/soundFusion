@@ -1,0 +1,15 @@
+
+GET http://127.0.0.1:8080/api/contact
+
+
+POST  http://127.0.0.1:8080/api/contact
+Content-Type: application/json
+{
+    name:"johana toledo",
+    emai:tjohana926@gmail.com,
+    phone:2422554,
+    address:san sebastian,
+    subject:boda,
+    message:disponibilidad 24/08
+}
+

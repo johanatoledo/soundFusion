@@ -102,9 +102,7 @@ header {
 .dropdown-item{
   color:white !important;
 }
-.dropdown-item:focus{
-color:#949a5e !important;
-}
+
 .dropdown-item:hover{
   color:black !important;
   background: none !important;
@@ -510,21 +508,12 @@ button {
 .color-text-form{
   color:#3d6b01 !important;
 }
-.style-input:hover{
-  background-color: #c8dc6e!important;
 
-}
 .style-input:active{
   border-color: #3d6b01!important;
   box-shadow: #3d6b01!important;
 }
-/*para el formulario*/
-.contact-container-content{
-  background: rgba(19, 19, 18, 0.3);
-}
-.letter-form-sent{
-  color:rgb(255,255,255)
-}
+
 /* Ocultar los elementos del menú cuando la pantalla sea menor de 992px */
 @media (max-width: 992px) {
   /* Menu nav*/
